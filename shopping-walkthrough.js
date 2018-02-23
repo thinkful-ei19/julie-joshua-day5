@@ -41,7 +41,7 @@ function addItemToShoppingList(itemName) {
   STORE.push({name: itemName, checked: false});
 }
 
-function addShoppingList(){
+function handleNewItemSubmit(){
   $('#js-shopping-list-form').submit(function (event){
     event.preventDefault();
     const newItemName = $('.js-shopping-list-entry').val();
@@ -53,19 +53,21 @@ function addShoppingList(){
 }
 
 
-function checkListItems(){
-  console.log('checkListItem ran');
+function handleItemCheckClicked(){
+  $('.js-shopping-list').on('click', '.js-item-toggle', event => {
+      console.log('`handleItemCheckClicked` ran');
+  });
 }
 
-function deleteListItem(){
+function handleDeleteItemClicked(){
   console.log('deleteListItem ran');
 }
 
 function handleShoppingList(){
   renderShoppingList();
-  addShoppingList();
-  checkListItems();
-  deleteListItem();    
+  handleNewItemSubmit();
+  handleItemCheckClicked();
+  handleDeleteItemClicked();    
 }
 
 $(handleShoppingList);
