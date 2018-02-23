@@ -31,7 +31,7 @@ function generateShoppingItemsString(shoppingList){
 
 function renderShoppingList(){
     console.log('renderShoppingList ran');
-    const shoppingListItemsString= '<li>apples</li>';
+    const shoppingListItemsString= generateShoppingItemsString(STORE);
 
     $('.js-shopping-list').html(shoppingListItemsString);
 }
