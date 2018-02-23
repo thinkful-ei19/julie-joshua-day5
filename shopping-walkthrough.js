@@ -37,7 +37,12 @@ function renderShoppingList(){
 }
 
 function addShoppingList(){
-    console.log('addShoppingList ran');
+    $('#js-shopping-list-form').submit(function (event){
+        event.preventDefault();
+        const newItemName = $('.js-shopping-list-entry').val();
+        console.log(newItemName);
+    $('.js-shopping-list-entry').val('');
+    });
 }
 
 function checkListItems(){
