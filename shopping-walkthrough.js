@@ -5,15 +5,15 @@ function renderShoppingList(){
 }
 
 function addShoppingList(){
-    console.log('addShoppingList ran';)
+    console.log('addShoppingList ran');
 }
 
 function checkListItems(){
-    console.log('checkListItem ran';)
+    console.log('checkListItem ran');
 }
 
 function deleteListItem(){
-    console.log('deleteListItem ran';)
+    console.log('deleteListItem ran');
 }
 
 function handleShoppingList(){
