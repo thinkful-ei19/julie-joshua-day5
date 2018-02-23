@@ -1,5 +1,12 @@
 'use strict';
 
+const STORE = [
+    {name: 'apples', checked: false},
+    {name: 'oranges', checked: false},
+    {name: 'milk', checked: true},
+    {name: 'bread', checked: false}
+];
+
 function renderShoppingList(){
     console.log('renderShoppingList ran');
 }
@@ -17,5 +24,10 @@ function deleteListItem(){
 }
 
 function handleShoppingList(){
+    renderShoppingList();
+    addShoppingList();
+    checkListItems();
+    deleteListItem();
     
 }
+$(handleShoppingList);
