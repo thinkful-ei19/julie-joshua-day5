@@ -78,7 +78,7 @@ function deleteItem(itemIndex){
 }
 
 function handleDeleteItemClicked(){
-  $('.js-shopping-list)').on('click', '.js-item-delete', event =>{
+  $('.js-shopping-list').on('click', '.js-item-delete', event =>{
     const itemIndex = getItemIndexFromElement(event.currentTarget);
     deleteItem(itemIndex);
     renderShoppingList();
